@@ -35,6 +35,7 @@ from .cluster import Cluster
 from .data_management import Data_Management
 from .physical import Physical
 from .cloud import Cloud
+from .reporting import Reporting
 from .exceptions import InvalidParameterException, RubrikException, APICallException, InvalidTypeException
 
 
@@ -45,7 +46,7 @@ _API = Api
 _CLOUD = Cloud
 
 
-class Connect(Cluster, Data_Management, Physical, Cloud):
+class Connect(Cluster, Data_Management, Physical, Cloud, Reporting):
     """This class acts as the base class for the Rubrik SDK and serves as the main interaction point
     for its end users. It also contains various helper functions used throughout the SDK.
 
